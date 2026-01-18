@@ -133,14 +133,12 @@ img{width:100%;border-radius:20px;margin-top:10px}
 <script>
 let pages=document.querySelectorAll('.page');let cur=0;
 function show(){pages.forEach(p=>p.classList.remove('active'));pages[cur].classList.add('active')}
-function nextPage(){if(cur<pages.length-1){cur++;show();vibe()}}
+function nextPage(){if(cur<pages.length-1){cur++;show();vibe()}let music=document.getElementById("bgm");
+music.play();}
 function prevPage(){if(cur>0){cur--;show();vibe()}}
 
 
-//music
 
-let music=document.getElementById("bgm");
-music.play();
 // swipe
 let xStart=null;
 document.addEventListener('touchstart',e=>xStart=e.touches[0].clientX);
@@ -203,3 +201,4 @@ for(let i=0;i<40;i++){let s=document.createElement('div');s.className='star';s.i
 </script>
 </body>
 </html>
+
